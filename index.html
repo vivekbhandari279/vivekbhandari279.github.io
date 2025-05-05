@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Senior Software Engineer with 8 years of experience in web and mobile development. Specializing in JavaScript, React Native, Node.js, and Laravel."
+    />
+    <meta
+      name="keywords"
+      content="Senior Software Engineer, Web Developer, Mobile Developer, JavaScript, React Native, Node.js, Laravel, Portfolio"
+    />
+    <meta name="author" content="Vivek Bhandari" />
+    <title>Vivek Bhandari | Senior Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                light: "#3b82f6",
+                dark: "#2563eb",
+              },
+              secondary: {
+                light: "#10b981",
+                dark: "#059669",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .smooth-transition {
+        transition: all 0.3s ease-in-out;
+      }
+
+      .gradient-text {
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(45deg, #3b82f6, #10b981);
+      }
+
+      .dark .gradient-text {
+        background-image: linear-gradient(45deg, #60a5fa, #34d399);
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+
+      .dark .project-card:hover {
+        box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.05);
+      }
+
+      .skill-badge:hover {
+        transform: scale(1.05);
+      }
+
+      #menu-toggle:checked + #menu {
+        display: block;
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 smooth-transition"
+  >
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm z-50 shadow-sm"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a
+              href="#"
+              class="text-xl font-bold text-primary-light dark:text-primary-dark smooth-transition"
+            >
+              <span class="gradient-text font-bold">VB</span>
+            </a>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#home"
+              class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark smooth-transition"
+              >Home</a
+            >
+            <a
+              href="#skills"
+              class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark smooth-transition"
+              >Skills</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark smooth-transition"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark smooth-transition"
+              >Contact</a
+            >
+
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 smooth-transition"
+            >
+              <i class="fas fa-moon dark:hidden"></i>
+              <i class="fas fa-sun hidden dark:block"></i>
+            </button>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark hover:bg-gray-100 dark:hover:bg-gray-700"
+            >Home</a
+          >
+          <a
+            href="#skills"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark hover:bg-gray-100 dark:hover:bg-gray-700"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark hover:bg-gray-100 dark:hover:bg-gray-700"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark hover:bg-gray-100 dark:hover:bg-gray-700"
+            >Contact</a
+          >
+
+          <div class="px-3 py-2">
+            <button
+              id="mobile-theme-toggle"
+              class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              <span>Toggle Theme</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              Hi, I'm <span class="gradient-text">Vivek Bhandari</span>
+            </h1>
+            <h2
+              class="text-2xl md:text-3xl font-semibold mb-6 text-gray-600 dark:text-gray-300"
+            >
+              Senior Software Engineer
+            </h2>
+            <p class="text-lg mb-8 text-gray-600 dark:text-gray-300 max-w-lg">
+              Experienced Information Technology Associate with 8 years of expertise in web and mobile development. 
+              Specializing in JavaScript (Node.js, React Native), PHP (Laravel), and cloud technologies.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#contact"
+                class="px-6 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg hover:bg-opacity-90 smooth-transition"
+              >
+                Contact Me
+              </a>
+              <a
+                href="#projects"
+                class="px-6 py-3 border border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 smooth-transition"
+              >
+                View Projects
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center">
+            <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark rounded-full opacity-20 blur-xl animate-pulse"
+              ></div>
+              <img
+                src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Developer working"
+                class="relative w-full h-full rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-lg animate-float"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-100 dark:bg-gray-800">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">My Skills</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Over the past 8 years, I've worked with a wide range of technologies
+            in the web development world.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <!-- Frontend Skills -->
+          <div
+            class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md smooth-transition"
+          >
+            <div class="flex items-center mb-4">
+              <div class="p-3 rounded-lg bg-blue-100 dark:bg-blue-900 mr-4">
+                <i
+                  class="fas fa-laptop-code text-blue-600 dark:text-blue-300 text-xl"
+                ></i>
+              </div>
+              <h3 class="text-xl font-semibold">Languages & Frameworks</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >JavaScript</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >Node.js</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >React Native</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >PHP</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >Laravel</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >HTML/CSS</span
+              >
+            </div>
+          </div>
+
+          <!-- Backend Skills -->
+          <div
+            class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md smooth-transition"
+          >
+            <div class="flex items-center mb-4">
+              <div class="p-3 rounded-lg bg-green-100 dark:bg-green-900 mr-4">
+                <i
+                  class="fas fa-server text-green-600 dark:text-green-300 text-xl"
+                ></i>
+              </div>
+              <h3 class="text-xl font-semibold">Backend & Mobile</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >RESTful APIs</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >Redux</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >Redux Saga</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >React Routing</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >Mobile App Dev</span
+              >
+            </div>
+          </div>
+
+          <!-- Database Skills -->
+          <div
+            class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md smooth-transition"
+          >
+            <div class="flex items-center mb-4">
+              <div class="p-3 rounded-lg bg-purple-100 dark:bg-purple-900 mr-4">
+                <i
+                  class="fas fa-database text-purple-600 dark:text-purple-300 text-xl"
+                ></i>
+              </div>
+              <h3 class="text-xl font-semibold">Database & E-commerce</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >MySQL</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >MongoDB</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >E-commerce</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >Payment Gateways</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >Database Design</span
+              >
+            </div>
+          </div>
+
+          <!-- DevOps & Cloud -->
+          <div
+            class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md smooth-transition"
+          >
+            <div class="flex items-center mb-4">
+              <div class="p-3 rounded-lg bg-yellow-100 dark:bg-yellow-900 mr-4">
+                <i
+                  class="fas fa-cloud text-yellow-600 dark:text-yellow-300 text-xl"
+                ></i>
+              </div>
+              <h3 class="text-xl font-semibold">Cloud & DevOps</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >AWS</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >EC2</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >S3</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >GitHub</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >Bitbucket</span
+              >
+            </div>
+          </div>
+
+          <!-- Other Skills -->
+          <div
+            class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md smooth-transition"
+          >
+            <div class="flex items-center mb-4">
+              <div class="p-3 rounded-lg bg-red-100 dark:bg-red-900 mr-4">
+                <i
+                  class="fas fa-tools text-red-600 dark:text-red-300 text-xl"
+                ></i>
+              </div>
+              <h3 class="text-xl font-semibold">Project Management</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >Team Leadership</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >Project Lifecycle</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >Team Collaboration</span
+              >
+              <span
+                class="skill-badge px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm smooth-transition"
+                >Agile Methodologies</span
+              >
+            </div>
+          </div>
+
+          <!-- Experience -->
+          <div
+            class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md smooth-transition"
+          >
+            <div class="flex items-center mb-4">
+              <div class="p-3 rounded-lg bg-indigo-100 dark:bg-indigo-900 mr-4">
+                <i
+                  class="fas fa-briefcase text-indigo-600 dark:text-indigo-300 text-xl"
+                ></i>
+              </div>
+              <h3 class="text-xl font-semibold">Experience</h3>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-medium">Senior Software Engineer</h4>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Vatech India Pvt. Ltd. • 2021-Present
+                </p>
+              </div>
+              <div>
+                <h4 class="font-medium">Software Engineer</h4>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Dalgona Technologies • 2021
+                </p>
+              </div>
+              <div>
+                <h4 class="font-medium">Software Engineer</h4>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Bestway Tours And Safari • 2019-2021
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Here are some of my recent projects that showcase my skills and
+            expertise.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg smooth-transition"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Dentganga"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold">Dentganga</h3>
+                <div class="flex space-x-2">
+                  <a
+                    href="https://dentganga.com"
+                    target="_blank"
+                    class="text-gray-500 hover:text-primary-light dark:hover:text-primary-dark"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Built a platform for dental products to assist small dealers, using Laravel, NodeJS, React Native, Redux, Saga, and MySQL. 
+                Includes responsive website, hybrid mobile app, and role-based admin panel.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs"
+                  >Laravel</span
+                >
+                <span
+                  class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs"
+                  >React Native</span
+                >
+                <span
+                  class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs"
+                  >MySQL</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg smooth-transition"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80"
+                alt="Bestway2india"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold">Bestway2india</h3>
+                <div class="flex space-x-2">
+                  <a
+                    href="https://bestway2india.com"
+                    target="_blank"
+                    class="text-gray-500 hover:text-primary-light dark:hover:text-primary-dark"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Created a comprehensive website for booking tours and admin panel for Bestway2india. 
+                Implemented features for hotel allocation, auto invoicing, and payments.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs"
+                  >Laravel</span
+                >
+                <span
+                  class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-xs"
+                  >Node.js</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg smooth-transition"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Skillbox"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold">Skillbox</h3>
+                <div class="flex space-x-2">
+                  <a
+                    href="https://skillboxes.com"
+                    target="_blank"
+                    class="text-gray-500 hover:text-primary-light dark:hover:text-primary-dark"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Built a portal for multiple art forms providing a community for artists, fans, and businesses. 
+                Supporting over 50,000 artists and 10,000 businesses.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs"
+                  >PHP</span
+                >
+                <span
+                  class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs"
+                  >Laravel</span
+                >
+                <span
+                  class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs"
+                  >MySQL</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg smooth-transition"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Bharatpur News"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold">Bharatpur News</h3>
+                <div class="flex space-x-2">
+                  <a
+                    href="https://bharatpurlive.com"
+                    target="_blank"
+                    class="text-gray-500 hover:text-primary-light dark:hover:text-primary-dark"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Created a website and admin panel for the Municipal Corporation of Bharatpur, Rajasthan. 
+                Developed APIs for live news updates and real-time feeds.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs"
+                  >React</span
+                >
+                <span
+                  class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs"
+                  >Redux</span
+                >
+                <span
+                  class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs"
+                  >MySQL</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div
+            class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg smooth-transition"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Stearns"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold">Stearns</h3>
+                <div class="flex space-x-2">
+                  <a
+                    href="#"
+                    class="text-gray-500 hover:text-primary-light dark:hover:text-primary-dark"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Built a mobile app for businesses to manage warehouses, client locations, and service vehicles. 
+                Facilitates collaboration among admins, supervisors, and employees.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs"
+                  >React Native</span
+                >
+                <span
+                  class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs"
+                  >Redux</span
+                >
+                <span
+                  class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-xs"
+                  >MySQL</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div
+            class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg smooth-transition"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Marketing Automation"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold">Marketing Automation</h3>
+                <div class="flex space-x-2">
+                  <a
+                    href="#"
+                    class="text-gray-500 hover:text-primary-light dark:hover:text-primary-dark"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="text-gray-500 hover:text-primary-light dark:hover:text-primary-dark"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                A marketing automation tool with email campaigns, customer
+                segmentation, and analytics dashboard.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs"
+                  >Angular</span
+                >
+                <span
+                  class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs"
+                  >Node.js</span
+                >
+                <span
+                  class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs"
+                  >MongoDB</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-800">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Have a project in mind or want to discuss potential opportunities?
+            Feel free to reach out!
+          </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-12">
+          <div class="md:w-1/2">
+            <form class="space-y-6">
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="subject"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full px-6 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg hover:bg-opacity-90 smooth-transition"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div class="md:w-1/2">
+            <div
+              class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg h-full"
+            >
+              <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div
+                    class="p-3 rounded-lg bg-primary-light dark:bg-primary-dark text-white mr-4"
+                  >
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Email</h4>
+                    <p class="text-gray-600 dark:text-gray-300">
+                      vivekbhandari279@gmail.com
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="p-3 rounded-lg bg-secondary-light dark:bg-secondary-dark text-white mr-4"
+                  >
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Phone</h4>
+                    <p class="text-gray-600 dark:text-gray-300">
+                      +91 9999063043
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="p-3 rounded-lg bg-purple-500 text-white mr-4">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Location</h4>
+                    <p class="text-gray-600 dark:text-gray-300">
+                      Delhi, India
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-10">
+                <h4 class="font-medium mb-4">Connect with me</h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="https://linkedin.com/in/vivek-bhandari-742b88114"
+                    target="_blank"
+                    class="p-3 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark smooth-transition"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="skype:vivek11911"
+                    class="p-3 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-blue-400 hover:text-white dark:hover:bg-blue-500 smooth-transition"
+                  >
+                    <i class="fab fa-skype"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <a href="#" class="text-xl font-bold text-white">
+              <span class="gradient-text font-bold">Vivek Bhandari</span>
+            </a>
+            <p class="mt-2">Senior Software Engineer</p>
+          </div>
+
+          <div class="flex flex-col items-center md:items-end">
+            <div class="flex space-x-6 mb-4">
+              <a href="#home" class="hover:text-white smooth-transition"
+                >Home</a
+              >
+              <a href="#skills" class="hover:text-white smooth-transition"
+                >Skills</a
+              >
+              <a href="#projects" class="hover:text-white smooth-transition"
+                >Projects</a
+              >
+              <a href="#contact" class="hover:text-white smooth-transition"
+                >Contact</a
+              >
+            </div>
+
+            <p>&copy; 2024 Vivek Bhandari. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 p-3 bg-primary-light dark:bg-primary-dark text-white rounded-full shadow-lg opacity-0 invisible smooth-transition"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+      // Theme toggle functionality
+      const themeToggle = document.getElementById("theme-toggle");
+      const mobileThemeToggle = document.getElementById("mobile-theme-toggle");
+      const html = document.documentElement;
+
+      // Check for saved user preference or use system preference
+      if (
+        localStorage.getItem("theme") === "dark" ||
+        (!localStorage.getItem("theme") &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        html.classList.add("dark");
+      } else {
+        html.classList.remove("dark");
+      }
+
+      // Toggle theme
+      function toggleTheme() {
+        html.classList.toggle("dark");
+        localStorage.setItem(
+          "theme",
+          html.classList.contains("dark") ? "dark" : "light"
+        );
+      }
+
+      themeToggle.addEventListener("click", toggleTheme);
+      mobileThemeToggle.addEventListener("click", toggleTheme);
+
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Back to top button
+      const backToTopButton = document.getElementById("back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.remove("opacity-0", "invisible");
+          backToTopButton.classList.add("opacity-100", "visible");
+        } else {
+          backToTopButton.classList.remove("opacity-100", "visible");
+          backToTopButton.classList.add("opacity-0", "invisible");
+        }
+      });
+
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
